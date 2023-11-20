@@ -1,0 +1,14 @@
+/*
+Author: Connor Hager
+File Name: styles.css
+*/
+
+
+
+/* Media Query for Print */
+@media print {
+    body {
+		background-color: #fff;
+		color: #000;
+    }
+}

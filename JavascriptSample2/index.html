@@ -1,0 +1,64 @@
+<html>
+
+    <head>
+        <title>Connor Hager Project 2-5 Final</title>
+    </head>
+
+
+    <header><h1>Connor Hager Project #2.5 Final </h1></header>
+
+
+    <body>
+
+        <h2>Welcome to Husky Gift Card Services</h2>
+
+        <p><b>Please review the following information before purchasing:</b></p>
+
+        <p>
+            <ul>
+                <li>Sepharoah gift cards can only be purchased with a minumum of $50 
+                and can't exceed $1000. Sepharoah gift cards can also only be ordered
+                from the East Coast.</li>
+                <li>Wallgrinds gift cards can only be purchased with a minimum of $5
+                and can't exceed $500. Wallgrinds gift cards can also only be processed 
+                in increments of $5.</li>
+                <li>Taco Hut gift cards can only be purchased with a minimum of $5
+                and can't exceed $500.</li>
+                <li>A 5% processing fee will be added for any gift card purchases
+                of less than $100 made outside of California.</li>
+            </ul>
+        </p>
+
+        <p>What store do you want to buy a gift card for?
+            <select id="selectStore">
+                <option value="sepharoah">Sepharoah</option>
+                <option value="wallgrinds">Wallgrinds</option>
+                <option value="tacoHut">Taco Hut</option>
+            </select>
+        </p>
+
+        <p>How much do you want to put on the gift card?
+            <input type="number" id="cardAmount" />
+        </p>
+
+        <p>Please enter your ZIP code:
+            <input type="number" id="zipCode" /> 
+        </p>
+
+
+        <!--Buttons for processing form-->
+        <button id="submit">Submit Purchase</button>
+        <div id="output"></div>
+        <button id="reset" hidden>Start Over</button>
+
+
+        <hr />
+        <a href="./flowchart.pdf">View my flowchart</a>
+
+    </body>
+
+
+    <script src="output.js"></script>
+    <script src="main.js"></script>
+
+</html>

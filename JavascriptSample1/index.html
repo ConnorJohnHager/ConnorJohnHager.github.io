@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Connor Hager Drawing # 9 Final</title>
+    <script src="d3.min.js"></script>
+    <script src="polygon.js"></script>
+</head>
+
+<body>
+    <p>
+        <b>Fish:</b> Select the coordinates (x, y) for the center of the fish's body. 
+        You can also select the color of the fins and the shape of the fish's tail fin.
+    </p>
+
+    <p>x: <input type="number" id="xInput" value="250"></p>
+    <p>y: <input type="number" id="yInput" value="300"></p>
+    <!--Moved xInput default so the Fish's tail isn't lost if value is left alone-->
+    
+    <p>Fin Color: <input type="color" id="finColor" value = "#FFD700"></p>
+    <!--Defaults to the original gold color-->
+    
+    <p>Tail Shape: <select id="tailShape" value="triangleTail">
+        <option value="triangleTail">Triangle</option>
+        <option value="roundedTail">Rounded</option>
+        <option value="forkedTail">Forked</option>
+        <option value="fancyTail">Fancy</option>
+    </select></p>
+    <!--Defaults to the original triangle tail-->
+
+    <button id="action">Draw!</button>
+    
+    <div id="canvas"></div>
+</body>
+<script src="main.js"></script>
+</html>
