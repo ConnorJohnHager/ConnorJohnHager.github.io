@@ -3,7 +3,22 @@ Author: Connor Hager
 File Name: styles.css
 */
 
+/* CSS Reset */
 
+/* Style rules for mobile viewport */
+img { /*temporary*/
+  max-width: 90%;
+}
+
+/* Style rules for tablet viewport */
+@media screen and (min-width: 620px), print {
+
+}
+
+/* Style rules for desktop viewport */
+@media screen and (min-width: 1200x), print {
+
+}
 
 /* Media Query for Print */
 @media print {
@@ -12,4 +27,3 @@ File Name: styles.css
 		color: #000;
     }
 }
-/* color */
