@@ -13,23 +13,48 @@ img {
   margin: 2% auto;
 }
 
+.twoColumn figure, .threeColumn figure, .sixColumn figure {
+  width: 100%;
+  margin: 0; /* Remove default margins for figures, will need to get rid of it */
+}
+
+.twoColumn, .threeColumn {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.sixColumn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
 /* Style rules for tablet viewport */
 @media screen and (min-width: 620px), print {
 
-  .twoColumn, .threeColumn {
+  .twoColumn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .threeColumn, .sixColumn {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .twoColumn figure, .threeColumn figure {
-    width: 100%;
-    margin: 0; /* Remove default margins for figures, will need to get rid of it */
+    gap: 20px;
   }
 
 }
 
 /* Style rules for desktop viewport */
-@media screen and (min-width: 1200x), print {
+@media screen and (min-width: 1400px), print {
+
+  .sixColumn {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+  }
 
 }
 
