@@ -18,7 +18,7 @@ img {
 
   .twoColumn, .threeColumn {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .twoColumn figure, .threeColumn figure {
@@ -30,11 +30,6 @@ img {
 
 /* Style rules for desktop viewport */
 @media screen and (min-width: 1200x), print {
-
-.threeColumn {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
 
 }
 
