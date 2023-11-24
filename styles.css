@@ -6,17 +6,35 @@ File Name: styles.css
 /* CSS Reset */
 
 /* Style rules for mobile viewport */
-img { /*temporary*/
+
+img {
+  display: block;
   max-width: 90%;
+  margin: 2% auto;
 }
 
 /* Style rules for tablet viewport */
 @media screen and (min-width: 620px), print {
 
+  .twoColumn, .threeColumn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .twoColumn figure, .threeColumn figure {
+    width: 100%;
+    margin: 0; /* Remove default margins for figures, will need to get rid of it */
+  }
+
 }
 
 /* Style rules for desktop viewport */
 @media screen and (min-width: 1200x), print {
+
+.threeColumn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
 }
 
