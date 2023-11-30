@@ -27,7 +27,7 @@ img {
 /* Style rules to show mobile class and hide tab-desk class */
 .mobile, .mobile-tablet {
 	display: block;
-}
+} 
 
 .tab-desk, .desktop, #nav-links {
 	display: none;

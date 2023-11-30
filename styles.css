@@ -3,20 +3,44 @@ Author: Connor Hager
 File Name: styles.css
 */
 
+/* Color Notes: -------
+#116530 - Green
+#21B6A8 - Blue Green
+#A3EBB1 - Neon Green
+#18A558 - Kelly Green
+
+Source: https://www.canva.com/colors/color-palettes/under-the-ferns/
+---------------------*/
+
 /* CSS Reset */
 
 /* Style rules for mobile viewport */
-
 h2 {
   text-align: center;
+}
+
+/* Style rules for body and images */
+body {
+  background-color: #116530;
 }
 
 img {
   display: block;
   max-width: 90%;
   margin: 2% auto;
+  border: 2px solid black;
 }
 
+img:hover {
+  border: 2px solid #A3EBB1;
+}
+
+/* Style rules for navigation area */
+nav {
+  background-color: #21B6A8;
+}
+
+/* Style rules for grids*/
 .twoColumn figure, .threeColumn figure, .sixColumn figure {
   width: 100%;
   margin: 0; /* Remove default margins for figures, will need to get rid of it */
@@ -36,7 +60,36 @@ img {
 
 /* Style rules for tablet viewport */
 @media screen and (min-width: 620px), print {
+  .tab-desk {
+    display: block;
+  }
 
+  /* Style rules for navigation area */
+  nav ul {
+		list-style-type: none;
+		text-align: center;
+  }
+  
+  nav li {
+		border-top: none;
+		display: inline-block;
+		font-size: 1.25em;
+		font-family: sans-serif; 
+		font-weight: bold;
+    padding: 1%;
+	}
+
+	nav li a {
+		display: block;
+		color: black;
+		text-decoration: none;
+	}
+
+  nav li a:hover {
+    color: #A3EBB1;
+  }
+
+  /* Style rules for grids*/
   .twoColumn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -52,8 +105,9 @@ img {
 }
 
 /* Style rules for desktop viewport */
-@media screen and (min-width: 1400px), print {
+@media screen and (min-width: 1600px), print {
 
+  /* Style rules for grids*/
   .sixColumn {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
