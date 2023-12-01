@@ -15,8 +15,12 @@ Source: https://www.canva.com/colors/color-palettes/under-the-ferns/
 /* CSS Reset */
 
 /* Style rules for mobile viewport */
+.tab-desk, #nav-links {
+  display: none;
+}
+
 h2 {
-  text-align: center;
+  text-align: center;		
 }
 
 /* Style rules for body and images */
@@ -40,6 +44,30 @@ nav {
   background-color: #21B6A8;
 }
 
+.mobile-nav a {
+	color: black;
+	text-align: center;
+	font-size: 2em;
+	text-decoration: none;
+	padding: 3%;
+	display: block;
+}
+
+.mobile-nav a.nav-icon {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+  color: black;
+	padding: 2%;
+}
+
+.nav-icon div {
+	height: 40px;
+	width: 40px;
+  color: black;
+}
+
 /* Style rules for grids*/
 .twoColumn figure, .threeColumn figure, .sixColumn figure {
   width: 100%;
@@ -60,11 +88,16 @@ nav {
 
 /* Style rules for tablet viewport */
 @media screen and (min-width: 620px), print {
+  .mobile-nav {
+		display: none;
+	}
+  
   .tab-desk {
     display: block;
   }
 
   /* Style rules for navigation area */
+
   nav ul {
 		list-style-type: none;
 		text-align: center;

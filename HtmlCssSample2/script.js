@@ -9,7 +9,7 @@ var answer = document.querySelector("#answer p")
 var heading = document.querySelector("#answer h2")
 
 // Hamburger menu function
-function menu() {
+function hamburger() {
     var navlinks = document.getElementById("nav-links");
     var menuicon = document.getElementById("icon");
     if (navlinks.style.display === "block") {
