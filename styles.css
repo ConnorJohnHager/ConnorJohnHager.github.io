@@ -84,7 +84,7 @@ nav {
   gap: 20px;
 }
 
-.sixColumn {
+.sixColumn, .fourColumn {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -127,7 +127,7 @@ nav {
   }
 
   /* Style rules for grids*/
-  .twoColumn {
+  .twoColumn, .fourColumn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -145,6 +145,12 @@ nav {
 @media screen and (min-width: 1600px), print {
 
   /* Style rules for grids*/
+  .fourColumn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
   .sixColumn {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
