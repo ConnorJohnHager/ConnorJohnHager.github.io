@@ -13,6 +13,11 @@ Source: https://www.canva.com/colors/color-palettes/under-the-ferns/
 ---------------------*/
 
 /* CSS Reset */
+body, header, nav, main, footer, img, figure, figcaption, h2  {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
 
 /* Style rules for mobile viewport */
 .tab-desk, #nav-links {
@@ -26,6 +31,10 @@ h2 {
 /* Style rules for body and images */
 body {
   background-color: #116530;
+}
+
+figure {
+  width: 100%;
 }
 
 img {
@@ -69,11 +78,6 @@ nav {
 }
 
 /* Style rules for grids*/
-.twoColumn figure, .threeColumn figure, .sixColumn figure {
-  width: 100%;
-  margin: 0; /* Remove default margins for figures, will need to get rid of it */
-}
-
 .twoColumn, .threeColumn {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
