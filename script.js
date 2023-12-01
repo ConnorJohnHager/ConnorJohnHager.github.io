@@ -9,9 +9,9 @@ function hamburger() {
     var menuicon = document.getElementById("icon");
     if (navlinks.style.display === "block") {
         navlinks.style.display = "none";
-        menuicon.style.color = "#2a1f14";
+        menuicon.style.color = "#21B6A8"; 
     } else {
         navlinks.style.display = "block";
-        menuicon.style.color = "#f6eee4";
+        menuicon.style.color = "#116530"; 
     }
 }

@@ -58,14 +58,14 @@ nav {
 	position: absolute;
 	left: 0;
 	top: 0;
-  color: black;
+  color: #21B6A8;
 	padding: 2%;
 }
 
 .nav-icon div {
 	height: 40px;
 	width: 40px;
-  color: black;
+  color: #21B6A8;
 }
 
 /* Style rules for grids*/
