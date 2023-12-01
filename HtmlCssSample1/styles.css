@@ -134,7 +134,7 @@ main p {
 	border-radius: 8px;
 }
 
-#contact, #rental h2 {
+#contact, #form h2, #rental h2 {
 	text-align: center;
 }
 

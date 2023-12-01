@@ -12,8 +12,10 @@ File Name: styles.css
 Source: https://www.canva.com/colors/color-palettes/under-the-ferns/
 ---------------------*/
 
+/* NEED TO MAKE TABLE RESPONSIVE */
+
 /* CSS Reset */
-body, header, nav, main, footer, img, figure, figcaption, h2  {
+body, header, nav, main, footer, img, figure, table, caption, tr, td, h2  {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -139,6 +141,24 @@ nav {
     gap: 20px;
   }
 
+  /* Style rules for Table */
+  table {
+    border-collapse: collapse;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: auto;
+		margin-right: auto;
+  }
+	
+  caption {
+    font-size: 1.5em;
+		font-weight: bold;
+		padding: 1%;
+	}
+
+  td {
+    width: 50%;
+  }
 }
 
 /* Style rules for desktop viewport */
