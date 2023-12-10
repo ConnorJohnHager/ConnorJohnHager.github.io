@@ -7,7 +7,6 @@ File Name: styles.css
 #116530 - Green
 #21B6A8 - Blue Green
 #A3EBB1 - Neon Green
-#18A558 - Kelly Green
 
 Source: https://www.canva.com/colors/color-palettes/under-the-ferns/
 ---------------------*/
@@ -30,14 +29,19 @@ body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, p  {
   display: block;
 }
 
+main {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;	
   padding: 2%;	
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1em;
   padding: 2%;
 }
 
@@ -106,7 +110,7 @@ nav {
 .sixColumn, .fourColumn {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
 
 /* Style rules for tablet viewport */
@@ -129,6 +133,14 @@ nav {
 
   img {
     max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  p {
+    font-size: 1.25em;
   }
 
   /* Style rules for navigation area */
@@ -190,11 +202,11 @@ nav {
 }
 
 /* Style rules for desktop viewport */
-@media screen and (min-width: 1048px), print { /* When Nav Bar dies */
+@media screen and (min-width: 1170px), print { /* When Nav Bar dies */
   .mobile-tab {
     display: none;
   }
-  
+
   .desk {
     display: block;
   }
@@ -205,6 +217,14 @@ nav {
 
   nav li {
 		font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.5em;
   }
 
   /* Style rules for grids*/
