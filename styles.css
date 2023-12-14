@@ -6,11 +6,8 @@ File Name: styles.css
 /* Color Notes: -------
 #004E64B8 - Midnight Green (Nav Background, Image Shadows)
 #00A5CF - Pacific Cyan (Nav Button / Hover)
-#25A18E - Persian Green
 #7AE582 - Light Green (Website Graphics)
 #B2D3C2 - Pistachio (Body Background)
-
-Source: https://www.canva.com/colors/color-palettes/under-the-ferns/
 ---------------------*/
 
 /* NEED TO MAKE TABLE RESPONSIVE */
@@ -31,6 +28,12 @@ body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, p  {
   display: block;
 }
 
+/* Style rules for body and images */
+body {
+  background-color: #B2D3C2;
+  padding-bottom: 2%;
+}
+
 main {
   padding-left: 2%;
   padding-right: 2%;
@@ -39,17 +42,21 @@ main {
 h2 {
   font-size: 1.5em;
   text-align: center;	
-  padding: 2%;	
+  padding-top: 2%;	
+  padding-bottom: 2%
 }
 
 p {
   font-size: 1em;
-  padding: 2%;
+  margin-bottom: 20px
 }
 
-/* Style rules for body and images */
-body {
-  background-color: #B2D3C2;
+a {
+  color: #004E64B8
+}
+
+a:hover {
+  color: #00A5CF;
 }
 
 figure {
@@ -77,7 +84,7 @@ nav {
 	text-align: center;
 	font-size: 1.25em;
 	text-decoration: none;
-	padding: 2%;
+  padding: 2%;
 	display: block;
 }
 
@@ -87,7 +94,7 @@ nav {
 	left: 0;
 	top: 0;
   color: #00A5CF;
-	padding: 2%;
+  padding: 2%;
 }
 
 .nav-icon div {
@@ -242,7 +249,6 @@ nav {
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
   }
-
 }
 
 /* Media Query for Print */
