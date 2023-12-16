@@ -31,7 +31,7 @@ body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, p  {
 /* Style rules for body and images */
 body {
   background-color: #B2D3C2;
-  padding-bottom: 2%;
+  font-family: sans-serif;
 }
 
 main {
@@ -122,6 +122,27 @@ nav {
   gap: 10px;
 }
 
+/* Style rules for footer area */
+footer {
+  background-color: #004E64;
+  padding: 2%;
+  margin-top: 5%;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer li {
+  padding: 0.25%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.75em;
+}
+
 
 /* Style rules for tablet viewport */
 @media screen and (min-width: 620px), print {
@@ -163,7 +184,6 @@ nav {
   nav li {
 		border-top: none;
 		display: inline-block;
-		font-family: sans-serif; 
     font-size: 0.84em;
 		font-weight: bold;
     padding: 1%;
