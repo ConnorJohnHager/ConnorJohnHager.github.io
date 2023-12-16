@@ -26,6 +26,7 @@ body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, p, ul,
 
 .mobile-tab {
   display: block;
+  padding: 1%;
 }
 
 /* Style rules for body and images */
@@ -50,7 +51,7 @@ main {
 h2 {
   font-size: 1.5em;
   text-align: center;	
-  padding-top: 2%;	
+  padding-top: 4%;	
   padding-bottom: 2%
 }
 
