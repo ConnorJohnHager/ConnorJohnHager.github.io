@@ -13,7 +13,7 @@ File Name: styles.css
 /* NEED TO MAKE TABLE RESPONSIVE */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, p  {
+body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, p, ul, li  {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -73,6 +73,13 @@ img {
   border: 2px solid black;
 }
 
+.header {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border: 0;
+}
+
 a img:hover {
   border: 2px solid #00A5CF;
 }
@@ -127,7 +134,7 @@ nav {
 
 /* Style rules for footer area */
 footer {
-  background-color: #004E64;
+  background-color: #004E64B8;
   padding: 2%;
   margin-top: 5%;
 }
