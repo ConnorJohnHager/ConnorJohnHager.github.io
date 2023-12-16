@@ -31,7 +31,10 @@ body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, p, ul,
 /* Style rules for body and images */
 body {
   background-color: #B2D3C2;
-}
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} /*Used flex content to make sure footer is always at the bottom of the screen, assisted by chatGPT */
 
 h2, nav, footer {
   font-family: sans-serif;
@@ -41,6 +44,7 @@ main {
   margin-top: 20px;
   padding-left: 2%;
   padding-right: 2%;
+  flex: 1;
 }
 
 h2 {
@@ -164,10 +168,6 @@ footer a {
   
   .tab-desk {
     display: block;
-  }
-
-  .right {
-    text-align: right;
   }
   
   .left {
