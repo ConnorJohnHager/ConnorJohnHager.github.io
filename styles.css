@@ -31,6 +31,9 @@ body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, p  {
 /* Style rules for body and images */
 body {
   background-color: #B2D3C2;
+}
+
+h2, nav, footer {
   font-family: sans-serif;
 }
 
