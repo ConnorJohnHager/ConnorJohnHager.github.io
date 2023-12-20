@@ -20,7 +20,7 @@ body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, p, ul,
 }
 
 /* Style rules for mobile viewport */
-.tab-desk, .desk, #nav-links {
+.tab-desk, .desk, #nav-links, footer {
   display: none;
 }
 
@@ -167,7 +167,7 @@ footer a {
 		display: none;
 	}
   
-  .tab-desk {
+  .tab-desk, footer {
     display: block;
   }
   
