@@ -47,7 +47,20 @@
         </nav>
 
         <main>
-			<h2>Connect about a potential project!</h2>
+			<h2 class="left">Connect about a potential project!</h2>
+
+            <form id="interestForm">
+                <label for="name">Full Name: </label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address: </label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="interest">Message: </label>
+                <textarea id="interest" name="interest" required></textarea>
+
+                <input type="submit" value="submit">
+            </form>
 
             <p>Email: <a href="mailto:connorhager12@gmail.com">connorhager12@gmail.com</a></p>
             <p>Phone: <a href="tel:+1-603-660-9374">+1-603-660-9374</a></p>
@@ -66,4 +79,5 @@
     </body>
 
     <script src="script.js"></script>
+    <script src="form.php"></script>
 </html>
