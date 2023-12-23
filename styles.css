@@ -245,7 +245,7 @@ footer a {
 }
 
 /* Style rules for desktop viewport */
-@media screen and (min-width: 1170px), print { /* When Nav Bar dies */
+@media screen and (min-width: 1100px), print { /* When Nav Bar dies */
   .mobile-tab {
     display: none;
   }
@@ -254,8 +254,17 @@ footer a {
     display: block;
   }
 
+  .condense {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
   img {
     max-width: 90%;
+  }
+
+  .shrink {
+    max-width: 70%;
   }
 
   nav li {
