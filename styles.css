@@ -197,7 +197,7 @@ footer a {
   nav li {
 		border-top: none;
 		display: inline-block;
-    font-size: 0.84em;
+    font-size: 1.25em; /* 0.84 with Events Page */
 		font-weight: bold;
     padding: 1%;
 	}
