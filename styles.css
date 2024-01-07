@@ -13,7 +13,7 @@ File Name: styles.css
 /* NEED TO MAKE TABLE RESPONSIVE */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, h3, p, ul, li  {
+body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, h3, p, ul, li, br  {
 	margin: 0;
 	padding: 0;
 	border: 0;
