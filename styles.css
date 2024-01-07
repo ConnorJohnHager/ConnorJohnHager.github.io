@@ -13,7 +13,7 @@ File Name: styles.css
 /* NEED TO MAKE TABLE RESPONSIVE */
 
 /* CSS Reset */
-body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, p, ul, li  {
+body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, h3, p, ul, li  {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -37,7 +37,7 @@ body {
   min-height: 100vh;
 } /*Used flex content to make sure footer is always at the bottom of the screen, assisted by chatGPT */
 
-h2, nav, footer {
+h2, h3, nav, footer {
   font-family: sans-serif;
 }
 
@@ -50,6 +50,13 @@ main {
 
 h2 {
   font-size: 1.5em;
+  text-align: center;	
+  padding-top: 4%;	
+  padding-bottom: 2%
+}
+
+h3 {
+  font-size: 1.25em;
   text-align: center;	
   padding-top: 4%;	
   padding-bottom: 2%
@@ -182,6 +189,10 @@ footer a {
     font-size: 1.75em;
   }
 
+  h3 {
+    font-size: 1.5em;
+  }
+
   p {
     font-size: 1.25em;
   }
@@ -272,6 +283,10 @@ footer a {
 
   h2 {
     font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.75em;
   }
 
   p {
