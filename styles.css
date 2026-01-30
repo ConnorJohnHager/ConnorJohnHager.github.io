@@ -10,8 +10,6 @@ File Name: styles.css
 #B2D3C2 - Pistachio (Body Background)
 ---------------------*/
 
-/* NEED TO MAKE TABLE RESPONSIVE */
-
 /* CSS Reset */
 body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, h3, h4, p, ul, li, br  {
 	margin: 0;
@@ -37,7 +35,7 @@ body {
   min-height: 100vh;
 } /*Used flex content to make sure footer is always at the bottom of the screen, assisted by chatGPT */
 
-h2, h3, h4, nav, footer {
+h2, h3, h4, p, li, nav, footer {
   font-family: sans-serif;
 }
 
@@ -57,6 +55,8 @@ h2 {
 
 h3 {
   font-size: 1.25em;
+  font-weight: normal;
+  text-decoration: underline;
   text-align: center;	
   padding-top: 4%;	
   padding-bottom: 2%
@@ -78,7 +78,7 @@ a {
   color: #004E64B8
 }
 
-a:hover {
+a:hover, a:focus {
   color: #00A5CF;
 }
 
@@ -100,7 +100,7 @@ img {
   border: 0;
 }
 
-a img:hover {
+a img:hover, a img:focus {
   border: 2px solid #00A5CF;
 }
 
@@ -317,7 +317,7 @@ footer a {
 /* Media Query for Print */
 @media print {
     body {
-		background-color: #fff;
-		color: #000;
+		  background-color: #fff;
+		  color: #000;
     }
 }
