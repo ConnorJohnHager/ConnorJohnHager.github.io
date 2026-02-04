@@ -284,20 +284,20 @@ footer a {
     max-width: 70%;
   }
 
-  nav li {
-		font-size: 1.5em;
-  }
-
   h2 {
-    font-size: 2em;
-  }
-
-  h3 {
     font-size: 1.75em;
   }
 
-  p {
+  h3 {
     font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1.25em;
+  }
+
+  nav li {
+		font-size: 1.5em;
   }
 
   /* Style rules for grids*/
