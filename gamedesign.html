@@ -72,10 +72,19 @@
                 <h2>Undergrowth</h2>
                 <i><p style="padding-top: 0px; text-align: center;">Godot | Metroidvania</p></i>
                 <br>
-                <p>***</p>
+                <p>Hollow Knight-inspired exploration platformer featuring interconnected world design, inventory management, and diverse enemy combat encounters.</p>
                 <h3>Technical Achievements</h3>
                 <p>
-                    ***
+                    <b>Persistent Save System:</b> JSON-based save architecture that preserves multi-variable game state across sessions in a single save file. Tracks player progression (health, currency, upgrades), inventory contents, world state (defeated enemies, collected items, unlocked map sections), and scene context (current location, last rest stop visited). 
+                    Auto-saves trigger on room transitions, rest stop interactions, shop visits, and player death, while supporting manual save deletion for fresh playthroughs.
+                </p>
+                <p>
+                    <b>Resource-Based Inventory Architecture:</b> Modular inventory system built with Godot resources that differentiates between consumables and permanent upgrades. Consumable items can be used to trigger effects (healing, fast travel) or sold for currency, while permanent items activate boolean flags in save data to grant persistent bonuses like increased max health or currency multipliers. 
+                    Integrated shop system allows the shopkeeper NPC to relocate between rest stops using specific consumable items, with shop inventory dynamically updating based on owned permanent upgrades.
+                </p>
+                <p>
+                    <b>Multi-Phase Boss Behavior:</b> State machine controlling the final boss with reactive behavior patterns that adapt to player actions and positioning. The boss enters chase state when the player is in range, transitions to attack state at close proximity, and requires strategic combat to defeat. 
+                    The boss needs to be hurt three times through dodging attacks, forcing wall collisions, or landing hits to enter a vulnerable stun state where damage can be dealt. The hurt counter resets after each stun phase ends, creating a risk-reward loop that emphasizes pattern recognition and tactical positioning over direct combat.
                 </p>
 
                 <div class="oneColumn">
@@ -94,13 +103,22 @@
                 <p>Cozy farm simulator where the player completes tasks, manages their inventory, and unlocks crops to help the farm.</p>
                 <h3>Technical Achievements</h3>
                 <p>
-                    ***
+                    <b>Scalable Inventory Architecture:</b> Inventory and deposit systems built using ScriptableObjects to ensure maintainability and expansion. 
+                    Features include stackable items, streamlined UI interactions, bulk transfer functionality, and dynamic restrictions that prevent depositing quest-critical items until objectives are completed.
+                </p>
+                <p>
+                    <b>Progression-Gated Resource System:</b> Task-driven crop spawning where cabbages and carrots unlock only after achieving key milestones. 
+                    Built with ScriptableObject architecture and inheritance, allowing rapid creation of new crop types where each defines its own respawn timer, unlock requirements, and yield values while sharing base crop behavior.
+                </p>
+                <p>
+                    <b>Dynamic Quest Framework:</b> A task-driven system with context-dependent dialogue that adapts based on player progress. Main tasks from Farmer Pete guide linear progression through the core storyline, 
+                    while a late-game side quest featuring the mysterious lake-dwelling squid exists outside the formal task system but integrates through dynamic dialogue interactions.
                 </p>
 
                 <div class="oneColumn">
                     <figure>
                         <a href="https://connorhager.itch.io/gecko-farm-insurance">
-                            <img src="images/Gecko Farm Insurance Thumbnail - Itch.io.png">
+                            <img src="images/GeckoFarmInsurance.gif">
                         </a>
                     </figure>
                 </div>
@@ -124,7 +142,7 @@
                 <div class="oneColumn">
                     <figure>
                         <a href="https://connorhager.itch.io/fauna-frenzy">
-                            <img src="images/Fauna Frenzy Thumbnail - Itch.io.png">
+                            <img src="images/FaunaFrenzy.gif">
                         </a>
                     </figure>
                 </div>
@@ -185,12 +203,21 @@
                         <td> <!-- Right -->
                             <div style="padding-left: 4%;">
                                 <h2 class="left" style="padding-bottom: 0px;">Undergrowth</h2>
-                                <i><p style="padding-top: 0px;">Godot | Metroidvania</p></i>
+                                <i><p style="padding-top: 0px;">Godot | Metroidvania | Group Project</p></i>
                                 <br>
-                                <p>***</p>
+                                <p>Hollow Knight-inspired exploration platformer featuring interconnected world design, inventory management, and diverse enemy combat encounters.</p>
                                 <h3 class="left">Technical Achievements</h3>
                                 <p>
-                                    ***
+                                    <b>Persistent Save System:</b> JSON-based save architecture that preserves multi-variable game state across sessions in a single save file. Tracks player progression (health, currency, upgrades), inventory contents, world state (defeated enemies, collected items, unlocked map sections), and scene context (current location, last rest stop visited). 
+                                    Auto-saves trigger on room transitions, rest stop interactions, shop visits, and player death, while supporting manual save deletion for fresh playthroughs.
+                                </p>
+                                <p>
+                                    <b>Resource-Based Inventory Architecture:</b> Modular inventory system built with Godot resources that differentiates between consumables and permanent upgrades. Consumable items can be used to trigger effects (healing, fast travel) or sold for currency, while permanent items activate boolean flags in save data to grant persistent bonuses like increased max health or currency multipliers. 
+                                    Integrated shop system allows the shopkeeper NPC to relocate between rest stops using specific consumable items, with shop inventory dynamically updating based on owned permanent upgrades.
+                                </p>
+                                <p>
+                                    <b>Multi-Phase Boss Behavior:</b> State machine controlling the final boss with reactive behavior patterns that adapt to player actions and positioning. The boss enters chase state when the player is in range, transitions to attack state at close proximity, and requires strategic combat to defeat. 
+                                    The boss needs to be hurt three times through dodging attacks, forcing wall collisions, or landing hits to enter a vulnerable stun state where damage can be dealt. The hurt counter resets after each stun phase ends, creating a risk-reward loop that emphasizes pattern recognition and tactical positioning over direct combat.
                                 </p>
                             </div>
                         </td>
@@ -200,12 +227,21 @@
                         <td> <!-- Left -->
                             <div style="padding-left: 4%; padding-right: 4%;">
                                 <h2 class="left" style="padding-bottom: 0px;">Gecko Farm Insurance</h2>
-                                <i><p style="padding-top: 0px;">Unity | Simulation</p></i>
+                                <i><p style="padding-top: 0px;">Unity | Simulation | Demo</p></i>
                                 <br>
                                 <p>Cozy farm simulator where the player completes tasks, manages their inventory, and unlocks crops to help the farm.</p>
                                 <h3 class="left">Technical Achievements</h3>
                                 <p>
-                                    ***
+                                    <b>Scalable Inventory Architecture:</b> Inventory and deposit systems built using ScriptableObjects to ensure maintainability and expansion. 
+                                    Features include stackable items, streamlined UI interactions, bulk transfer functionality, and dynamic restrictions that prevent depositing quest-critical items until objectives are completed.
+                                </p>
+                                <p>
+                                    <b>Progression-Gated Resource System:</b> Task-driven crop spawning where cabbages and carrots unlock only after achieving key milestones. 
+                                    Built with ScriptableObject architecture and inheritance, allowing rapid creation of new crop types where each defines its own respawn timer, unlock requirements, and yield values while sharing base crop behavior.
+                                </p>
+                                <p>
+                                    <b>Dynamic Quest Framework:</b> A task-driven system with context-dependent dialogue that adapts based on player progress. Main tasks from Farmer Pete guide linear progression through the core storyline, 
+                                    while a late-game side quest featuring the mysterious lake-dwelling squid exists outside the formal task system but integrates through dynamic dialogue interactions.
                                 </p>
                             </div>
                         </td>
@@ -214,7 +250,7 @@
                             <div>
                                 <figure>
                                     <a href="https://connorhager.itch.io/gecko-farm-insurance">
-                                        <img src="images/Gecko Farm Insurance Thumbnail - Itch.io.png">
+                                        <img src="images/GeckoFarmInsurance.gif">
                                     </a>
                                 </figure>
                             </div>
@@ -226,7 +262,7 @@
                             <div>
                                 <figure>
                                     <a href="https://connorhager.itch.io/fauna-frenzy">
-                                        <img src="images/Fauna Frenzy Thumbnail - Itch.io.png">
+                                        <img src="images/FaunaFrenzy.gif">
                                     </a>
                                 </figure>
                             </div>
@@ -235,7 +271,7 @@
                         <td> <!-- Right -->
                             <div style="padding-left: 4%;">
                                 <h2 class="left" style="padding-bottom: 0px;">Fauna Frenzy</h2>
-                                <i><p style="padding-top: 0px;">Unity | Simulation</p></i>
+                                <i><p style="padding-top: 0px;">Unity | Survival | Demo</p></i>
                                 <br>
                                 <p>Top-down survival game where the player tames or defeats wildlife through tactical item management to challenge the final boss.</p>
                                 <h3 class="left">Technical Achievements</h3>
