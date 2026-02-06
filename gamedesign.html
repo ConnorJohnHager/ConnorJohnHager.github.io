@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--
+	Author Name: Connor Hager
+	File Name: gamedesign.html
+-->	 
+
+<html lang="en">
+
+    <head>
+        <title>Connor Hager: Game Design</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <nav class="mobile-nav">
+			<div id="nav-links">
+				<a href="index.html">Home</a>
+                <a href="gamedesign.html">Game Design</a>
+                <a href="webdesign.html">Web Design</a>
+				<a href="marketing.html">Marketing</a>
+			</div>
+
+			<a class="nav-icon" style="background-color: #003A4C" onclick="hamburger()">
+				<b><div id="icon">&#9776;</div></b>
+			</a>
+		</nav>
+
+        <header>
+            <img src="images/header.png" alt="Connor Hager's Portfolio" class="header">
+        </header>
+
+        <nav class="tab-desk">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gamedesign.html" style="color:#00A5CF">Game Design</a></li>
+                <li><a href="webdesign.html">Web Design</a></li>
+                <li><a href="marketing.html">Marketing</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <br>
+
+            <div class="mobile-tab">
+                <h2 style="padding-top: 0px;">Elements of Gardening</h2>
+                <i><p style="padding-top: 0px; text-align: center;">Godot | In Development</p></i>
+                <br>
+                <p>Creature collection game where the player breeds elementals with inherited traits, manages a customizable garden, and battles through combat stages using strategic team composition.</p>
+                <h3>Technical Achievements</h3>
+                <p>
+                    <b>Genetic Breeding System:</b> Multi-layered inheritance system where offspring traits are determined through probabilistic selection from parent values, element mixing mechanics, and weighted mutation chances. Each breeding cycle calculates element inheritance with opportunities for mixed elements, color inheritance across three regions with colors from three tiered-rarities, and stat progression using weighted selection that prioritizes lower stats for mutation opportunities. 
+                    Visual variation is displayed through modular character architecture with color-changing shaders that dynamically render inherited body, eye, and hair colors on a single prefab. This architecture enables emergent gameplay where players discover rare combinations through experimentation.
+                </p>
+                <p>
+                    <b>Persistent Garden Architecture:</b> Comprehensive save system that preserves not only the player's stats and collected elementals, but also the player's entire customizable garden layout in a single JSON file. Tracks time-based progression for breeding and crop growth, calculating elapsed real-world time when the app is closed and applying accumulated progress on load. 
+                    Each summoning stone stores parent assignments, breeding method, completion status, and automation preferences, while garden plots track assigned elementals and crop storage, creating a fully persistent idle-game experience.
+                </p>
+
+                <div class="oneColumn">
+                    <figure>
+                        <a href="https://connorhager.itch.io/thesis-playtesting">
+                            <img src="images/ElementsOfGardening.gif">
+                        </a>
+                    </figure>
+                </div>
+                
+                <br>
+                
+                <h2>Undergrowth</h2>
+                <i><p style="padding-top: 0px; text-align: center;">Godot | Metroidvania | Group Project</p></i>
+                <br>
+                <p>Hollow Knight-inspired exploration platformer featuring interconnected world design, inventory management, and diverse enemy combat encounters.</p>
+                <h3>Technical Achievements</h3>
+                <p>
+                    <b>Comprehensive Save System:</b> JSON-based save architecture that preserves multi-variable game state across sessions in a single save file. Tracks player progression (health, currency, upgrades), inventory contents, world state (defeated enemies, collected items, unlocked map sections), and scene context (current location, last rest stop visited). 
+                    Auto-saves trigger on room transitions, rest stop interactions, shop visits, and player death, while supporting manual save deletion for fresh playthroughs. This ensures seamless progression tracking without performance overhead during gameplay.
+                </p>
+                <p>
+                    <b>Resource-Based Inventory Architecture:</b> Modular inventory system built with Godot resources that differentiates between consumables and permanent upgrades. Consumable items can be used to trigger effects (healing, fast travel) or sold for currency, while permanent items activate boolean flags in save data to grant persistent bonuses like increased max health or currency multipliers. 
+                    Integrated shop system allows the shopkeeper NPC to relocate between rest stops using specific consumable items, with shop inventory dynamically updating based on owned permanent upgrades.
+                </p>
+                <p>
+                    <b>Complex Boss Behavior:</b> State machine controlling the final boss with reactive behavior patterns that adapt to player actions and positioning. The boss enters chase state when the player is in range, transitions to attack state at close proximity, and requires strategic combat to defeat. 
+                    The boss needs to be hurt three times through dodging attacks, forcing wall collisions, or landing hits to enter a vulnerable stun state where damage can be dealt. The hurt counter resets after each stun phase ends, creating a risk-reward loop that emphasizes pattern recognition and tactical positioning over direct combat.
+                </p>
+
+                <div class="oneColumn">
+                    <figure>
+                        <a href="https://connorhager.itch.io/undergrowth">
+                            <img src="images/Undergrowth.gif">
+                        </a>
+                    </figure>
+                </div>
+                
+                <br>
+                
+                <h2>Gecko Farm Insurance</h2>
+                <i><p style="padding-top: 0px; text-align: center;">Unity | Simulation | Demo</p></i>
+                <br>
+                <p>Cozy farm simulator where the player completes tasks, manages their inventory, and unlocks crops to help the farm.</p>
+                <h3>Technical Achievements</h3>
+                <p>
+                    <b>Scalable Inventory Architecture:</b> Inventory and deposit systems built using ScriptableObjects to ensure maintainability and expansion. 
+                    Features include stackable items, streamlined UI interactions, bulk transfer functionality, and dynamic restrictions that prevent depositing quest-critical items until objectives are completed.
+                </p>
+                <p>
+                    <b>Progression-Gated Resource System:</b> Task-driven crop spawning where cabbages and carrots unlock only after achieving key milestones. 
+                    Built with ScriptableObject architecture and inheritance to enable rapid creation of new crop types. Each crop defines its own respawn timer, unlock requirements, and yield values while sharing base harvesting behavior.
+                </p>
+                <p>
+                    <b>Dynamic Quest Framework:</b> A task-driven system with context-dependent dialogue that adapts based on player progress. Main tasks from Farmer Pete guide linear progression through the core storyline, 
+                    while a late-game side quest featuring the mysterious lake-dwelling squid exists outside the formal task system but integrates through dynamic dialogue interactions.
+                </p>
+
+                <div class="oneColumn">
+                    <figure>
+                        <a href="https://connorhager.itch.io/gecko-farm-insurance">
+                            <img src="images/GeckoFarmInsurance.gif">
+                        </a>
+                    </figure>
+                </div>
+
+                <br>
+
+                <h2>Fauna Frenzy</h2>
+                <i><p style="padding-top: 0px; text-align: center;">Unity | Simulation | Demo</p></i>
+                <br>
+                <p>Top-down survival game where the player tames or defeats wildlife through tactical item management to challenge the final boss.</p>
+                <h3>Technical Achievements</h3>
+                <p>
+                    <b>Responsive Item Effects:</b> A context-sensitive item interaction system where items apply fixed damage or healing values based on target type, species-specific preferences, and player input. 
+                    Preferred items can heal and tame wild animals, heal allied creatures, or restore player health, while non-preferred items apply damage or pass through allied targets.
+                </p>
+                <p>
+                    <b>Universal NPC Behavior System:</b> All animal NPCs operate using instances of a shared universal state machine that dynamically manages behavior execution, state transitions, combat targeting, and ally-specific behaviors such as cooperative assistance and retreat commands. 
+                    Species-specific traits (such as preferred foods and health values) are handled independently of the state machine while still influencing behavior conditions.
+                </p>
+                
+                <div class="oneColumn">
+                    <figure>
+                        <a href="https://connorhager.itch.io/fauna-frenzy">
+                            <img src="images/FaunaFrenzy.gif">
+                        </a>
+                    </figure>
+                </div>
+
+                <h4 class="mobile-nav"><b><a href="gamedesign.html" style="color: #003A4C"><u>Return to top</u></a></b></h4>
+
+                <br class="mobile-nav">
+            </div>
+
+
+
+
+
+
+            <div class="desk">
+                <table>
+                    <tr> 
+                        <td> <!-- Left -->
+                            <div style="padding-left: 4%; padding-right: 4%;">
+                                <h2 class="left" style="padding-top: 0px; padding-bottom: 0px;">Elements of Gardening</h2>
+                                <i><p style="padding-top: 0px;">Godot | In Development</p></i>
+                                <br>
+                                <p>Creature collection game where the player breeds elementals with inherited traits, manages a customizable garden, and battles through combat stages using strategic team composition.</p>
+                                <h3 class="left">Technical Achievements</h3>
+                                <p>
+                                    <b>Genetic Breeding System:</b> Multi-layered inheritance system where offspring traits are determined through probabilistic selection from parent values, element mixing mechanics, and weighted mutation chances. Each breeding cycle calculates element inheritance with opportunities for mixed elements, color inheritance across three regions with colors from three tiered-rarities, and stat progression using weighted selection that prioritizes lower stats for mutation opportunities. 
+                                    Visual variation is displayed through modular character architecture with color-changing shaders that dynamically render inherited body, eye, and hair colors on a single prefab. This architecture enables emergent gameplay where players discover rare combinations through experimentation.
+                                </p>
+                                <p>
+                                    <b>Persistent Garden Architecture:</b> Comprehensive save system that preserves not only the player's stats and collected elementals, but also the player's entire customizable garden layout in a single JSON file. Tracks time-based progression for breeding and crop growth, calculating elapsed real-world time when the app is closed and applying accumulated progress on load. 
+                                    Each summoning stone stores parent assignments, breeding method, completion status, and automation preferences, while garden plots track assigned elementals and crop storage, creating a fully persistent idle-game experience.
+                                </p>
+                            </div>
+                        </td>
+                    
+                        <td> <!-- Right -->
+                            <figure>
+                                <a href="https://connorhager.itch.io/thesis-playtesting">
+                                    <img src="images/ElementsOfGardening.gif">
+                                </a>
+                            </figure>
+                        </td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td> <!-- Left -->
+                            <div>
+                                <figure>
+                                    <a href="https://connorhager.itch.io/undergrowth">
+                                        <img src="images/Undergrowth.gif">
+                                    </a>
+                                </figure>
+                            </div>
+                        </td>
+    
+                        <td> <!-- Right -->
+                            <div style="padding-left: 4%;">
+                                <h2 class="left" style="padding-bottom: 0px;">Undergrowth</h2>
+                                <i><p style="padding-top: 0px;">Godot | Metroidvania | Group Project</p></i>
+                                <br>
+                                <p>Hollow Knight-inspired exploration platformer featuring interconnected world design, inventory management, and diverse enemy combat encounters.</p>
+                                <h3 class="left">Technical Achievements</h3>
+                                <p>
+                                    <b>Comprehensive Save System:</b> JSON-based save architecture that preserves multi-variable game state across sessions in a single save file. Tracks player progression (health, currency, upgrades), inventory contents, world state (defeated enemies, collected items, unlocked map sections), and scene context (current location, last rest stop visited). 
+                                    Auto-saves trigger on room transitions, rest stop interactions, shop visits, and player death, while supporting manual save deletion for fresh playthroughs. This ensures seamless progression tracking without performance overhead during gameplay.
+                                </p>
+                                <p>
+                                    <b>Resource-Based Inventory Architecture:</b> Modular inventory system built with Godot resources that differentiates between consumables and permanent upgrades. Consumable items can be used to trigger effects (healing, fast travel) or sold for currency, while permanent items activate boolean flags in save data to grant persistent bonuses like increased max health or currency multipliers. 
+                                    Integrated shop system allows the shopkeeper NPC to relocate between rest stops using specific consumable items, with shop inventory dynamically updating based on owned permanent upgrades.
+                                </p>
+                                <p>
+                                    <b>Complex Boss Behavior:</b> State machine controlling the final boss with reactive behavior patterns that adapt to player actions and positioning. The boss enters chase state when the player is in range, transitions to attack state at close proximity, and requires strategic combat to defeat. 
+                                    The boss needs to be hurt three times through dodging attacks, forcing wall collisions, or landing hits to enter a vulnerable stun state where damage can be dealt. The hurt counter resets after each stun phase ends, creating a risk-reward loop that emphasizes pattern recognition and tactical positioning over direct combat.
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td> <!-- Left -->
+                            <div style="padding-left: 4%; padding-right: 4%;">
+                                <h2 class="left" style="padding-bottom: 0px;">Gecko Farm Insurance</h2>
+                                <i><p style="padding-top: 0px;">Unity | Simulation | Demo</p></i>
+                                <br>
+                                <p>Cozy farm simulator where the player completes tasks, manages their inventory, and unlocks crops to help the farm.</p>
+                                <h3 class="left">Technical Achievements</h3>
+                                <p>
+                                    <b>Scalable Inventory Architecture:</b> Inventory and deposit systems built using ScriptableObjects to ensure maintainability and expansion. 
+                                    Features include stackable items, streamlined UI interactions, bulk transfer functionality, and dynamic restrictions that prevent depositing quest-critical items until objectives are completed.
+                                </p>
+                                <p>
+                                    <b>Progression-Gated Resource System:</b> Task-driven crop spawning where cabbages and carrots unlock only after achieving key milestones. 
+                                    Built with ScriptableObject architecture and inheritance to enable rapid creation of new crop types. Each crop defines its own respawn timer, unlock requirements, and yield values while sharing base harvesting behavior.
+                                </p>
+                                <p>
+                                    <b>Dynamic Quest Framework:</b> A task-driven system with context-dependent dialogue that adapts based on player progress. Main tasks from Farmer Pete guide linear progression through the core storyline, 
+                                    while a late-game side quest featuring the mysterious lake-dwelling squid exists outside the formal task system but integrates through dynamic dialogue interactions.
+                                </p>
+                            </div>
+                        </td>
+    
+                        <td> <!-- Right -->
+                            <div>
+                                <figure>
+                                    <a href="https://connorhager.itch.io/gecko-farm-insurance">
+                                        <img src="images/GeckoFarmInsurance.gif">
+                                    </a>
+                                </figure>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td> <!-- Left -->
+                            <div>
+                                <figure>
+                                    <a href="https://connorhager.itch.io/fauna-frenzy">
+                                        <img src="images/FaunaFrenzy.gif">
+                                    </a>
+                                </figure>
+                            </div>
+                        </td>
+    
+                        <td> <!-- Right -->
+                            <div style="padding-left: 4%;">
+                                <h2 class="left" style="padding-bottom: 0px;">Fauna Frenzy</h2>
+                                <i><p style="padding-top: 0px;">Unity | Survival | Demo</p></i>
+                                <br>
+                                <p>Top-down survival game where the player tames or defeats wildlife through tactical item management to challenge the final boss.</p>
+                                <h3 class="left">Technical Achievements</h3>
+                                <p>
+                                    <b>Responsive Item Effects:</b> A context-sensitive item interaction system where items apply fixed damage or healing values based on target type, species-specific preferences, and player input. 
+                                    Preferred items can heal and tame wild animals, heal allied creatures, or restore player health, while non-preferred items apply damage or pass through allied targets.
+                                </p>
+                                <p>
+                                    <b>Adaptive Behavior System:</b> All animal NPCs operate using instances of a shared universal state machine that dynamically manages behavior execution, state transitions, combat targeting, and ally-specific behaviors such as cooperative assistance and retreat commands. 
+                                    Species-specific traits (such as preferred foods and health values) are handled independently of the state machine while still influencing behavior conditions.
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+
+        <footer>
+            <div class="contact-info">
+                <p>
+                    <a href="mailto:connorhager12@gmail.com">connorhager12@gmail.com</a> | 
+                    <a href="tel:+16036609374">+1.603.660.9374</a>
+                </p>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gamedesign.html">Game Design</a></li>
+                <li><a href="webdesign.html">Web Design</a></li>
+                <li><a href="marketing.html">Marketing</a></li>
+            </ul>
+        </footer>
+    </body>
+
+    <script src="script.js"></script>
+</html>

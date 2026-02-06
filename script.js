@@ -1,7 +1,8 @@
 /*
-	Student Name: Connor Hager
-	File Name: script.js
-*/ 
+Author: Connor Hager
+File Name: script.js
+*/
+
 
 // Hamburger menu function
 function hamburger() {

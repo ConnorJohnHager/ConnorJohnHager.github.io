@@ -4,13 +4,10 @@ File Name: styles.css
 */
 
 /* Color Notes: -------
-#004E64B8 - Midnight Green (Nav Background, Image Shadows)
-#00A5CF - Pacific Cyan (Nav Button / Hover)
-#7AE582 - Light Green (Website Graphics)
-#B2D3C2 - Pistachio (Body Background)
+#003A4C - Nav Background / Image Borders
+#00A5CF - Nav Button / Hover
+#DCEBE4 - Body Background
 ---------------------*/
-
-/* NEED TO MAKE TABLE RESPONSIVE */
 
 /* CSS Reset */
 body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, h3, h4, p, ul, li, br  {
@@ -20,7 +17,7 @@ body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, h3, h4
 }
 
 /* Style rules for mobile viewport */
-.tab-desk, .desk, #nav-links, footer {
+.tab-desk, .desk, #nav-links, footer ul {
   display: none;
 }
 
@@ -31,13 +28,13 @@ body, header, nav, main, footer, img, figure, table, caption, tr, td, h2, h3, h4
 
 /* Style rules for body and images */
 body {
-  background-color: #B2D3C2;
+  background-color: #DCEBE4;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 } /*Used flex content to make sure footer is always at the bottom of the screen, assisted by chatGPT */
 
-h2, h3, h4, nav, footer {
+h2, h3, h4, p, li, nav, footer {
   font-family: sans-serif;
 }
 
@@ -51,12 +48,14 @@ main {
 h2 {
   font-size: 1.5em;
   text-align: center;	
-  padding-top: 4%;	
+  padding-top: 2%;	
   padding-bottom: 2%
 }
 
 h3 {
   font-size: 1.25em;
+  font-weight: normal;
+  text-decoration: underline;
   text-align: center;	
   padding-top: 4%;	
   padding-bottom: 2%
@@ -75,10 +74,10 @@ p {
 }
 
 a {
-  color: #004E64B8
+  color: #003A4C
 }
 
-a:hover {
+a:hover, a:focus {
   color: #00A5CF;
 }
 
@@ -90,7 +89,7 @@ img {
   display: block;
   max-width: 70%;
   margin: 2% auto;
-  border: 2px solid black;
+  border: 2px solid #003A4C;
 }
 
 .header {
@@ -100,13 +99,13 @@ img {
   border: 0;
 }
 
-a img:hover {
+a img:hover, a img:focus {
   border: 2px solid #00A5CF;
 }
 
 /* Style rules for navigation area */
 nav {
-  background-color: #004E64B8;
+  background-color: #003A4C;
 }
 
 .mobile-nav a {
@@ -154,7 +153,7 @@ nav {
 
 /* Style rules for footer area */
 footer {
-  background-color: #004E64B8;
+  background-color: #003A4C;
   padding: 2%;
   margin-top: 5%;
 }
@@ -173,6 +172,15 @@ footer a {
   font-size: 0.75em;
 }
 
+footer .contact-info {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+footer .contact-info a {
+  font-size: 0.85em;
+}
+
 
 /* Style rules for tablet viewport */
 @media screen and (min-width: 620px), print {
@@ -180,7 +188,7 @@ footer a {
 		display: none;
 	}
   
-  .tab-desk, footer {
+  .tab-desk, footer ul {
     display: block;
   }
   
@@ -284,20 +292,20 @@ footer a {
     max-width: 70%;
   }
 
-  nav li {
-		font-size: 1.5em;
-  }
-
   h2 {
-    font-size: 2em;
-  }
-
-  h3 {
     font-size: 1.75em;
   }
 
-  p {
+  h3 {
     font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1.25em;
+  }
+
+  nav li {
+		font-size: 1.5em;
   }
 
   /* Style rules for grids*/
@@ -317,7 +325,7 @@ footer a {
 /* Media Query for Print */
 @media print {
     body {
-		background-color: #fff;
-		color: #000;
+		  background-color: #fff;
+		  color: #000;
     }
 }
