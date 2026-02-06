@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-	Student Name: Connor Hager
+	Author Name: Connor Hager
 	File Name: gamedesign.html
 -->	 
 
@@ -22,11 +22,10 @@
                 <a href="gamedesign.html">Game Design</a>
                 <a href="webdesign.html">Web Design</a>
 				<a href="marketing.html">Marketing</a>
-				<a href="contact.html">Contact</a>
 			</div>
 
-			<a class="nav-icon" onclick="hamburger()">
-				<div id="icon">&#9776;</div>
+			<a class="nav-icon" style="background-color: #003A4C" onclick="hamburger()">
+				<b><div id="icon">&#9776;</div></b>
 			</a>
 		</nav>
 
@@ -37,68 +36,70 @@
         <nav class="tab-desk">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="gamedesign.html">Game Design</a></li>
+                <li><a href="gamedesign.html" style="color:#00A5CF">Game Design</a></li>
                 <li><a href="webdesign.html">Web Design</a></li>
                 <li><a href="marketing.html">Marketing</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
         <main>
-            <div class="mobile-tab">
-                <p>
-                    ***
-                </p>
+            <br>
 
-                <h2>Elements of Gardening</h2>
+            <div class="mobile-tab">
+                <h2 style="padding-top: 0px;">Elements of Gardening</h2>
                 <i><p style="padding-top: 0px; text-align: center;">Godot | In Development</p></i>
                 <br>
-                <p>***</p>
+                <p>Creature collection game where the player breeds elementals with inherited traits, manages a customizable garden, and battles through combat stages using strategic team composition.</p>
                 <h3>Technical Achievements</h3>
                 <p>
-                    ***
+                    <b>Genetic Breeding System:</b> Multi-layered inheritance system where offspring traits are determined through probabilistic selection from parent values, element mixing mechanics, and weighted mutation chances. Each breeding cycle calculates element inheritance with opportunities for mixed elements, color inheritance across three regions with colors from three tiered-rarities, and stat progression using weighted selection that prioritizes lower stats for mutation opportunities. 
+                    Visual variation is displayed through modular character architecture with color-changing shaders that dynamically render inherited body, eye, and hair colors on a single prefab. This architecture enables emergent gameplay where players discover rare combinations through experimentation.
+                </p>
+                <p>
+                    <b>Persistent Garden Architecture:</b> Comprehensive save system that preserves not only the player's stats and collected elementals, but also the player's entire customizable garden layout in a single JSON file. Tracks time-based progression for breeding and crop growth, calculating elapsed real-world time when the app is closed and applying accumulated progress on load. 
+                    Each summoning stone stores parent assignments, breeding method, completion status, and automation preferences, while garden plots track assigned elementals and crop storage, creating a fully persistent idle-game experience.
                 </p>
 
                 <div class="oneColumn">
                     <figure>
                         <a href="https://connorhager.itch.io/thesis-playtesting">
-                            <img src="images/geoWebsite.png">
+                            <img src="images/ElementsOfGardening.gif">
                         </a>
                     </figure>
                 </div>
                 
-                <br><hr>
+                <br>
                 
                 <h2>Undergrowth</h2>
-                <i><p style="padding-top: 0px; text-align: center;">Godot | Metroidvania</p></i>
+                <i><p style="padding-top: 0px; text-align: center;">Godot | Metroidvania | Group Project</p></i>
                 <br>
                 <p>Hollow Knight-inspired exploration platformer featuring interconnected world design, inventory management, and diverse enemy combat encounters.</p>
                 <h3>Technical Achievements</h3>
                 <p>
-                    <b>Persistent Save System:</b> JSON-based save architecture that preserves multi-variable game state across sessions in a single save file. Tracks player progression (health, currency, upgrades), inventory contents, world state (defeated enemies, collected items, unlocked map sections), and scene context (current location, last rest stop visited). 
-                    Auto-saves trigger on room transitions, rest stop interactions, shop visits, and player death, while supporting manual save deletion for fresh playthroughs.
+                    <b>Comprehensive Save System:</b> JSON-based save architecture that preserves multi-variable game state across sessions in a single save file. Tracks player progression (health, currency, upgrades), inventory contents, world state (defeated enemies, collected items, unlocked map sections), and scene context (current location, last rest stop visited). 
+                    Auto-saves trigger on room transitions, rest stop interactions, shop visits, and player death, while supporting manual save deletion for fresh playthroughs. This ensures seamless progression tracking without performance overhead during gameplay.
                 </p>
                 <p>
                     <b>Resource-Based Inventory Architecture:</b> Modular inventory system built with Godot resources that differentiates between consumables and permanent upgrades. Consumable items can be used to trigger effects (healing, fast travel) or sold for currency, while permanent items activate boolean flags in save data to grant persistent bonuses like increased max health or currency multipliers. 
                     Integrated shop system allows the shopkeeper NPC to relocate between rest stops using specific consumable items, with shop inventory dynamically updating based on owned permanent upgrades.
                 </p>
                 <p>
-                    <b>Multi-Phase Boss Behavior:</b> State machine controlling the final boss with reactive behavior patterns that adapt to player actions and positioning. The boss enters chase state when the player is in range, transitions to attack state at close proximity, and requires strategic combat to defeat. 
+                    <b>Complex Boss Behavior:</b> State machine controlling the final boss with reactive behavior patterns that adapt to player actions and positioning. The boss enters chase state when the player is in range, transitions to attack state at close proximity, and requires strategic combat to defeat. 
                     The boss needs to be hurt three times through dodging attacks, forcing wall collisions, or landing hits to enter a vulnerable stun state where damage can be dealt. The hurt counter resets after each stun phase ends, creating a risk-reward loop that emphasizes pattern recognition and tactical positioning over direct combat.
                 </p>
 
                 <div class="oneColumn">
                     <figure>
                         <a href="https://connorhager.itch.io/undergrowth">
-                            <img src="images/geoWebsite.png">
+                            <img src="images/Undergrowth.gif">
                         </a>
                     </figure>
                 </div>
                 
-                <br><hr>
+                <br>
                 
                 <h2>Gecko Farm Insurance</h2>
-                <i><p style="padding-top: 0px; text-align: center;">Unity | Simulation</p></i>
+                <i><p style="padding-top: 0px; text-align: center;">Unity | Simulation | Demo</p></i>
                 <br>
                 <p>Cozy farm simulator where the player completes tasks, manages their inventory, and unlocks crops to help the farm.</p>
                 <h3>Technical Achievements</h3>
@@ -108,7 +109,7 @@
                 </p>
                 <p>
                     <b>Progression-Gated Resource System:</b> Task-driven crop spawning where cabbages and carrots unlock only after achieving key milestones. 
-                    Built with ScriptableObject architecture and inheritance, allowing rapid creation of new crop types where each defines its own respawn timer, unlock requirements, and yield values while sharing base crop behavior.
+                    Built with ScriptableObject architecture and inheritance to enable rapid creation of new crop types. Each crop defines its own respawn timer, unlock requirements, and yield values while sharing base harvesting behavior.
                 </p>
                 <p>
                     <b>Dynamic Quest Framework:</b> A task-driven system with context-dependent dialogue that adapts based on player progress. Main tasks from Farmer Pete guide linear progression through the core storyline, 
@@ -123,10 +124,10 @@
                     </figure>
                 </div>
 
-                <br><hr>
+                <br>
 
                 <h2>Fauna Frenzy</h2>
-                <i><p style="padding-top: 0px; text-align: center;">Unity | Simulation</p></i>
+                <i><p style="padding-top: 0px; text-align: center;">Unity | Simulation | Demo</p></i>
                 <br>
                 <p>Top-down survival game where the player tames or defeats wildlife through tactical item management to challenge the final boss.</p>
                 <h3>Technical Achievements</h3>
@@ -147,7 +148,7 @@
                     </figure>
                 </div>
 
-                <h4 class="mobile-nav"><b><a href="gamedesign.html" style="color: #004E64B8"><u>Return to top</u></a></b></h4>
+                <h4 class="mobile-nav"><b><a href="gamedesign.html" style="color: #003A4C"><u>Return to top</u></a></b></h4>
 
                 <br class="mobile-nav">
             </div>
@@ -158,23 +159,22 @@
 
 
             <div class="desk">
-                <br>
-
-                <p style="padding-left: 3%;">
-                    ***
-                </p>
-
                 <table>
                     <tr> 
                         <td> <!-- Left -->
                             <div style="padding-left: 4%; padding-right: 4%;">
-                                <h2 class="left" style="padding-bottom: 0px;">Elements of Gardening</h2>
+                                <h2 class="left" style="padding-top: 0px; padding-bottom: 0px;">Elements of Gardening</h2>
                                 <i><p style="padding-top: 0px;">Godot | In Development</p></i>
                                 <br>
-                                <p>***</p>
+                                <p>Creature collection game where the player breeds elementals with inherited traits, manages a customizable garden, and battles through combat stages using strategic team composition.</p>
                                 <h3 class="left">Technical Achievements</h3>
                                 <p>
-                                    ***
+                                    <b>Genetic Breeding System:</b> Multi-layered inheritance system where offspring traits are determined through probabilistic selection from parent values, element mixing mechanics, and weighted mutation chances. Each breeding cycle calculates element inheritance with opportunities for mixed elements, color inheritance across three regions with colors from three tiered-rarities, and stat progression using weighted selection that prioritizes lower stats for mutation opportunities. 
+                                    Visual variation is displayed through modular character architecture with color-changing shaders that dynamically render inherited body, eye, and hair colors on a single prefab. This architecture enables emergent gameplay where players discover rare combinations through experimentation.
+                                </p>
+                                <p>
+                                    <b>Persistent Garden Architecture:</b> Comprehensive save system that preserves not only the player's stats and collected elementals, but also the player's entire customizable garden layout in a single JSON file. Tracks time-based progression for breeding and crop growth, calculating elapsed real-world time when the app is closed and applying accumulated progress on load. 
+                                    Each summoning stone stores parent assignments, breeding method, completion status, and automation preferences, while garden plots track assigned elementals and crop storage, creating a fully persistent idle-game experience.
                                 </p>
                             </div>
                         </td>
@@ -182,7 +182,7 @@
                         <td> <!-- Right -->
                             <figure>
                                 <a href="https://connorhager.itch.io/thesis-playtesting">
-                                    <img src="images/geoWebsite.png">
+                                    <img src="images/ElementsOfGardening.gif">
                                 </a>
                             </figure>
                         </td>
@@ -194,7 +194,7 @@
                             <div>
                                 <figure>
                                     <a href="https://connorhager.itch.io/undergrowth">
-                                        <img src="images/geoWebsite.png">
+                                        <img src="images/Undergrowth.gif">
                                     </a>
                                 </figure>
                             </div>
@@ -208,15 +208,15 @@
                                 <p>Hollow Knight-inspired exploration platformer featuring interconnected world design, inventory management, and diverse enemy combat encounters.</p>
                                 <h3 class="left">Technical Achievements</h3>
                                 <p>
-                                    <b>Persistent Save System:</b> JSON-based save architecture that preserves multi-variable game state across sessions in a single save file. Tracks player progression (health, currency, upgrades), inventory contents, world state (defeated enemies, collected items, unlocked map sections), and scene context (current location, last rest stop visited). 
-                                    Auto-saves trigger on room transitions, rest stop interactions, shop visits, and player death, while supporting manual save deletion for fresh playthroughs.
+                                    <b>Comprehensive Save System:</b> JSON-based save architecture that preserves multi-variable game state across sessions in a single save file. Tracks player progression (health, currency, upgrades), inventory contents, world state (defeated enemies, collected items, unlocked map sections), and scene context (current location, last rest stop visited). 
+                                    Auto-saves trigger on room transitions, rest stop interactions, shop visits, and player death, while supporting manual save deletion for fresh playthroughs. This ensures seamless progression tracking without performance overhead during gameplay.
                                 </p>
                                 <p>
                                     <b>Resource-Based Inventory Architecture:</b> Modular inventory system built with Godot resources that differentiates between consumables and permanent upgrades. Consumable items can be used to trigger effects (healing, fast travel) or sold for currency, while permanent items activate boolean flags in save data to grant persistent bonuses like increased max health or currency multipliers. 
                                     Integrated shop system allows the shopkeeper NPC to relocate between rest stops using specific consumable items, with shop inventory dynamically updating based on owned permanent upgrades.
                                 </p>
                                 <p>
-                                    <b>Multi-Phase Boss Behavior:</b> State machine controlling the final boss with reactive behavior patterns that adapt to player actions and positioning. The boss enters chase state when the player is in range, transitions to attack state at close proximity, and requires strategic combat to defeat. 
+                                    <b>Complex Boss Behavior:</b> State machine controlling the final boss with reactive behavior patterns that adapt to player actions and positioning. The boss enters chase state when the player is in range, transitions to attack state at close proximity, and requires strategic combat to defeat. 
                                     The boss needs to be hurt three times through dodging attacks, forcing wall collisions, or landing hits to enter a vulnerable stun state where damage can be dealt. The hurt counter resets after each stun phase ends, creating a risk-reward loop that emphasizes pattern recognition and tactical positioning over direct combat.
                                 </p>
                             </div>
@@ -237,7 +237,7 @@
                                 </p>
                                 <p>
                                     <b>Progression-Gated Resource System:</b> Task-driven crop spawning where cabbages and carrots unlock only after achieving key milestones. 
-                                    Built with ScriptableObject architecture and inheritance, allowing rapid creation of new crop types where each defines its own respawn timer, unlock requirements, and yield values while sharing base crop behavior.
+                                    Built with ScriptableObject architecture and inheritance to enable rapid creation of new crop types. Each crop defines its own respawn timer, unlock requirements, and yield values while sharing base harvesting behavior.
                                 </p>
                                 <p>
                                     <b>Dynamic Quest Framework:</b> A task-driven system with context-dependent dialogue that adapts based on player progress. Main tasks from Farmer Pete guide linear progression through the core storyline, 
@@ -291,12 +291,17 @@
         </main>
 
         <footer>
+            <div class="contact-info">
+                <p>
+                    <a href="mailto:connorhager12@gmail.com">connorhager12@gmail.com</a> | 
+                    <a href="tel:+16036609374">+1.603.660.9374</a>
+                </p>
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gamedesign.html">Game Design</a></li>
                 <li><a href="webdesign.html">Web Design</a></li>
                 <li><a href="marketing.html">Marketing</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </footer>
     </body>
