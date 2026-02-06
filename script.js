@@ -16,3 +16,19 @@ function hamburger() {
         menuicon.style.color = "#00A5CF"; 
     }
 }
+
+// Sync nav-icon height with header image
+function syncNavHeight() {
+    const header = document.querySelector('header img');
+    const navIcon = document.querySelector('.nav-icon');
+    
+    if (header && navIcon) {
+        const headerHeight = header.offsetHeight;
+        navIcon.style.height = headerHeight + 'px';
+        navIcon.style.width = headerHeight + 'px'; // Make it square
+    }
+}
+
+// Run on load and resize
+window.addEventListener('load', syncNavHeight);
+window.addEventListener('resize', syncNavHeight);
