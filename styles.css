@@ -118,18 +118,17 @@ nav {
 }
 
 .mobile-nav a.nav-icon {
-	display: block;
   position: absolute;
-	left: 0;
-	top: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #003A4C;
   color: #00A5CF;
-  padding: 2%;
-}
-
-.nav-icon div {
-	height: 40px;
-	width: 40px;
-  color: #00A5CF;
+  padding: 0;
+  aspect-ratio: 1 / 1; /* Makes it square */
+  width: auto;
 }
 
 .oneColumn {
