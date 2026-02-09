@@ -150,6 +150,36 @@ nav {
   gap: 10px;
 }
 
+/* Style rules for buttons */
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.contact-btn {
+    background-color: #003A4C;
+    color: white;
+    font-family: sans-serif;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 25px; /* More rounded */
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    min-width: 150px;
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+    background-color: #00A5CF;
+    color: white;
+}
+
 /* Style rules for footer area */
 footer {
   background-color: #003A4C;
