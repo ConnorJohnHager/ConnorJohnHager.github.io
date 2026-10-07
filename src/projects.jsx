@@ -2,7 +2,7 @@ function Project(props) {
   return (
         <div>
             <h2>{props.title}</h2>
-            <h3>{props.type}</h3>
+            <h3>{props.subtitle}</h3>
             <a href={props.link}><img src={props.imgFile} alt={props.imgAlt}></img></a>
             <div>{props.summary}</div>
             <h3>Technical Achievement</h3>
@@ -10,21 +10,31 @@ function Project(props) {
   )
 }
 
-function ProjectsList() {
+function FilterableProjectsList({tag}) {
+    const selection = projects.filter(project =>
+        project.tags.includes(tag)
+    )
+
     return (
         <div>
-            {projects.map(project => (
+            {selection.map(project => (
                 <Project key={project.title} {...project} />
             ))}
         </div>
     )
 }
 
+const filterTags = [
+    "All",
+    "Godot",
+    "Unity"
+]
+
 const projects = [
     {
         title: "Elements of Gardening", 
-        type: "Godot | In Development",
-        tags: ["Video Game", "Godot"],
+        subtitle: "Godot | In Development",
+        tags: ["All", "Video Game", "Godot"],
         imgFile: "src/assets/videogames/ElementsOfGardening.gif",
         imgAlt: "Brief gameplay of harvesting and summoning from Elements of Gardening",
         link: "https://connorhager.itch.io/thesis-playtesting",
@@ -33,8 +43,8 @@ const projects = [
     },
     {
         title: "Undergrowth", 
-        type: "Godot | Metroidvania | Group Project",
-        tags: ["Video Game", "Godot"],
+        subtitle: "Godot | Metroidvania | Group Project",
+        tags: ["All", "Video Game", "Godot"],
         imgFile: "src/assets/videogames/Undergrowth.gif",
         imgAlt: "Gameplay of the player stunning the boss from Undergrowth",
         link: "https://connorhager.itch.io/undergrowth",
@@ -43,8 +53,8 @@ const projects = [
     },
     {
         title: "Gecko Farm Insurance", 
-        type: "Unity | Simulation | Demo",
-        tags: ["Video Game", "Unity"],
+        subtitle: "Unity | Simulation | Demo",
+        tags: ["All", "Video Game", "Unity"],
         imgFile: "src/assets/videogames/GeckoFarmInsurance.gif",
         imgAlt: "Gameplay of the player walking up and talking with the farmer from Gecko Farm Insurance",
         link: "https://connorhager.itch.io/gecko-farm-insurance",
@@ -53,8 +63,8 @@ const projects = [
     },
     {
         title: "Fauna Frenzy", 
-        type: "Unity | Simulation | Demo",
-        tags: ["Video Game", "Unity"],
+        subtitle: "Unity | Simulation | Demo",
+        tags: ["All", "Video Game", "Unity"],
         imgFile: "src/assets/videogames/FaunaFrenzy.gif",
         imgAlt: "Gameplay of the player damaging, taming, and healing a fox from Fauna Frenzy",
         link: "https://connorhager.itch.io/fauna-frenzy",
@@ -63,4 +73,4 @@ const projects = [
     }
 ]
 
-export default ProjectsList
+export default FilterableProjectsList

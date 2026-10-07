@@ -1,12 +1,18 @@
 import { useState } from 'react'
-import ProjectsList from './projects.jsx'
+import FilterableProjectsList from './projects.jsx'
+
+const projectTags = [
+    "All",
+    "Godot",
+    "Unity"
+]
 
 function App() {
-  const [count, setCount] = useState(0)
+  const filter = "All"
   
   return (
     <div className="p-8">
-      <ProjectsList />
+      <FilterableProjectsList tag={filter} />
     </div>
   )
 }
