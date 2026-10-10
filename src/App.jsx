@@ -1,20 +1,37 @@
 import { useState } from 'react'
-import FilterableProjectsList from './projects.jsx'
-
-const projectTags = [
-    "All",
-    "Godot",
-    "Unity"
-]
+import FilterableProjectsList, {projectTags} from './projects.jsx'
 
 function App() {
-  const filter = "All"
-  
   return (
     <div className="p-8">
-      <FilterableProjectsList tag={filter} />
+      <ProjectFilter />
     </div>
   )
 }
 
 export default App
+
+function ProjectFilter() {
+  const [selectedFilter, setSelectedFilter] = useState("All")
+
+  return (
+    <div>
+      <label>
+        Filter Projects:
+        <select 
+          name="projectFilter" 
+          value={selectedFilter}
+          onChange={e => setSelectedFilter(e.target.value)}
+        >
+          {
+            projectTags.map((tag) => (
+              <option key={tag} value={tag}>
+                {tag}
+              </option>
+          ))}
+        </select>
+      </label>
+      <FilterableProjectsList tag={selectedFilter} />
+    </div>
+  )
+}
