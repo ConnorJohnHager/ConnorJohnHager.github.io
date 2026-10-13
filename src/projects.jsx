@@ -18,7 +18,7 @@ function Project(props) {
                 <h2>{props.title} {expanded ? '−' : '+'}</h2>
                 <h3>{props.subtitle}</h3>
                 <img src={props.imgFile} alt={props.imgAlt}></img>
-                <div>{props.summary}</div>
+                <p>{props.summary}</p>
             </UnstyledButton>
             
             {expanded && (
