@@ -55,6 +55,16 @@ a:hover, a:focus {
 }
 
 /* =========================
+   Introduction Components
+   ========================= */
+
+.introduction {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+/* =========================
    Project Components
    ========================= */
 
@@ -63,8 +73,8 @@ a:hover, a:focus {
     margin: 0 auto;
 }
 
-.project {
-    margin-bottom: 16px;
+.project-filter-title {
+    text-align: center;
 }
 
 .project-filter {
@@ -96,6 +106,10 @@ a:hover, a:focus {
     background-color: #F4F8F5;
 }
 
+.project {
+    margin-bottom: 16px;
+}
+
 /** Project Layout: image left, content right **/
 .project-layout {
     display: flex;
@@ -120,6 +134,32 @@ a:hover, a:focus {
 
 .project-details {
     padding: 24px;
+}
+
+/* =========================
+   LearnToCode Components
+   ========================= */
+
+.learn-to-code-all {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    max-width: 90%;
+}
+.learn-to-code-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #003A4C;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.learn-to-code-button:hover, .learn-to-code-button:focus {
+    background-color: #00A5CF;
+    color: #FFFFFF
 }
 
 /* =========================
