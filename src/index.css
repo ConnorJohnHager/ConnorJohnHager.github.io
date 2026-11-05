@@ -1,0 +1,217 @@
+/* =========================
+   General Styles
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #DCEBE4;
+    min-height: 5vh;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+main {
+    padding: 2%;
+    min-height: 85vh;
+    background-color: #DCEBE4;
+}
+
+h2, h3, p, a, img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1em;
+}
+
+a {
+    color: #003A4C;
+    font-weight: bold;
+}
+
+a:hover, a:focus {
+    color: #00A5CF;
+}
+
+/* =========================
+   Introduction Components
+   ========================= */
+
+.introduction {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+/* =========================
+   Project Components
+   ========================= */
+
+.project-all {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.project-filter-title {
+    text-align: center;
+}
+
+.project-filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.project-filter select {
+    margin-left: 8px;
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid #003A4C;
+    cursor: pointer;
+}
+
+.project-button {
+    display: block;
+    width: 100%;
+    padding: 24px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    text-align: left;
+}
+
+.project-button:hover {
+    background-color: #F4F8F5;
+}
+
+.project {
+    margin-bottom: 16px;
+}
+
+/** Project Layout: image left, content right **/
+.project-layout {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.project-image {
+    flex: 0 0 40%;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-summary {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-details {
+    padding: 24px;
+}
+
+/* =========================
+   LearnToCode Components
+   ========================= */
+
+.learn-to-code-all {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    max-width: 90%;
+}
+.learn-to-code-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #003A4C;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.learn-to-code-button:hover, .learn-to-code-button:focus {
+    background-color: #00A5CF;
+    color: #FFFFFF
+}
+
+/* =========================
+   Footer Components
+   ========================= */
+
+footer {
+    background-color: #003A4C;
+    padding: 2%;
+    color: #fff;
+    text-align: center;
+    min-height: 10vh;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover, footer a:focus {
+    color: #00A5CF;
+}
+
+.footer-note {
+    padding-top: 20px;
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+/* =========================
+   Smaller Devices
+   ========================= */
+
+@media (max-width: 720px) {
+    .project-all {
+        width: 95%;
+    }
+
+    .project-layout {
+        flex-direction: column;
+        gap: 0px
+    }
+
+    .project-image {
+        flex: auto;
+        width: 100%;
+    }
+
+    .project-image img {
+        margin-bottom: 0px;
+    }
+
+    .project-button h2, .project-button h3 {
+        text-align: center;
+    }
+}
