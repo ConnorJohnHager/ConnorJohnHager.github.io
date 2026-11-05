@@ -1,8 +1,16 @@
 import { UnstyledButton } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
+// Keys are root-relative, e.g. "/src/assets/videogames/FaunaFrenzy.gif"
+const images = import.meta.glob('/src/assets/**/*.{png,jpg,jpeg,gif,webp,svg}', {
+  eager: true,
+  query: '?url',
+  import: 'default',
+});
+
 function Project(props) {
     const [expanded, handlers] = useDisclosure(false);
+    const photo = images[`/${props.imgFile}`];
 
     return (
         <div class="project">
@@ -13,7 +21,7 @@ function Project(props) {
             >
                 <div class="project-layout">
                     <div class="project-image">
-                        <img src={props.imgFile} alt={props.imgAlt} />
+                        <img src={photo} alt={props.imgAlt} />
                     </div>
 
                     <div class="project-summary">
