@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import FilterableProjectsList, {projectTags} from './projects.jsx'
+import headerImg from './assets/header.png';
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <>
 
     <header>
-      <img src="src/assets/header.png" alt="Connor Hager's Portfolio Header"></img>
+      <img src={headerImg} alt="Connor Hager's Portfolio Header"></img>
     </header>
 
     <main>
