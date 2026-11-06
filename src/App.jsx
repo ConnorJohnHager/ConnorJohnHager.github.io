@@ -19,7 +19,7 @@ function App() {
 
     <footer>
       <p>Email: <a href="mailto:connorhager12@gmail.com">connorhager12@gmail.com</a></p>
-      <p>Phone: <a href="tel:+16036609374">+1.603.660.9374</a></p>
+      <p><a href="https://www.linkedin.com/in/connor-hager/">Connect on LinkedIn</a></p>
       <p class="footer-note">This website was self-developed using React.js and Mantine.</p>
     </footer>
 
